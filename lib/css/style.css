@@ -25,4 +25,9 @@
    font-size: 64px;
 }
 
+.thumbnail img {
+   min-height:50px;
+   height:271px;
+}
+
 /* End Override */
