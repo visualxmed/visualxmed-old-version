@@ -6,24 +6,56 @@
    font-style: normal;
 }
 
+/* Load Avenir Fonts */
+@font-face {
+   font-family: 'Avenir Next LT Pro Regular';
+      src: url('../fonts/avenirnextltpro/AvenirNextLTPro-Regular.woff');
+   font-style: normal;
+   font-weight: normal;
+}
+
 /* Override Bootstrap styles */
+/* NAVBAR */
+.navbar .container {
+   margin: 0 0 0 0;
+   width: 100%;
+}
+
+.navbar-inverse {
+   background-color: #000000;
+   border-color: #000000;
+}
 
 .navbar-brand,
 .navbar-nav li a {
    font-family: NanumGothic;
-    line-height: 75px;
-    height: 217px;
-    padding-top: 0;
+   line-height: 60px;
+   height: 217px;
+   padding-top: 51px;
+}
+
+.navbar-inverse .navbar-brand {
+   color: #50e3c2;
 }
 
 .navbar-brand small {
-  display:block;
-  font-size:24px;
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
 }
 
 .navbar-brand {
    font-size: 64px;
 }
+
+.navbar-inverse .navbar-nav>li>a {
+   font-family: 'Avenir Next LT Pro Regular';
+   font-size: 30px;
+   padding: 85px 50px 0px 110px;
+   color: #ffffff;
+}
+
+/* END NAVBAR */
 
 .thumbnail img {
    min-height:50px;
@@ -34,11 +66,11 @@
 
 
 footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
 }
 
 footer ul li {
-    display: inline;
+   display: inline;
 }
