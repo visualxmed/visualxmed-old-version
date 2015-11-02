@@ -29,6 +29,10 @@ ul li a {
    font-family: AvenirRegular;
 }
 
+.categories {
+   list-style-type: none;
+}
+
 /* Override Bootstrap styles */
 /* NAVBAR */
 /*.navbar .container {
