@@ -16,7 +16,7 @@
    font-weight: normal;
 }
 
-h1 {
+.company {
    font-family: NanumGothic;
    color: #50e3c2;
 }
@@ -34,7 +34,21 @@ ul li a {
 }
 
 .infographics {
+
+}
+
+.content {
    vertical-align: top;
+}
+
+footer ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+footer ul li {
+   display: inline;
 }
 
 /* Override Bootstrap styles */
@@ -86,14 +100,3 @@ ul li a {
 }*/
 
 /* End Override */
-
-
-footer ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-}
-
-footer ul li {
-   display: inline;
-}
