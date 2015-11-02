@@ -33,6 +33,10 @@ ul li a {
    list-style-type: none;
 }
 
+.infographics {
+   vertical-align: top;
+}
+
 /* Override Bootstrap styles */
 /* NAVBAR */
 /*.navbar .container {
