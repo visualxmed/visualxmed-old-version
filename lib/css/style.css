@@ -34,6 +34,10 @@ ul li a {
 }
 
 .categories {
+   border-right: 3px solid #979797;
+}
+
+.categories_list {
    list-style-type: none;
 }
 
@@ -60,5 +64,6 @@ footer ul {
 }
 
 footer ul li {
+   border-left: 3px solid #979797;
    display: inline;
 }
