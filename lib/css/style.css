@@ -21,6 +21,10 @@
    color: #50e3c2;
 }
 
+.topnav {
+   vertical-align: top;
+}
+
 h2 {
    font-family: AvenirRegular;
 }
@@ -33,9 +37,17 @@ ul li a {
    list-style-type: none;
 }
 
-.infographics {
-
+.crop {
+   width: 275px;
+   height: 275px;
+   overflow: hidden;
 }
+
+.crop img {
+   width: 700px;
+   margin: -5px 0 0 0;
+}
+
 
 .content {
    vertical-align: top;
@@ -50,53 +62,3 @@ footer ul {
 footer ul li {
    display: inline;
 }
-
-/* Override Bootstrap styles */
-/* NAVBAR */
-/*.navbar .container {
-   margin: 0 0 0 0;
-   width: 100%;
-}
-
-.navbar-inverse {
-   background-color: #000000;
-   border-color: #000000;
-}
-
-.navbar-brand,
-.navbar-nav li a {
-   font-family: NanumGothic;
-   line-height: 60px;
-   height: 217px;
-   padding-top: 51px;
-}
-
-.navbar-inverse .navbar-brand {
-   color: #50e3c2;
-}
-
-.navbar-brand small {
-  display: block;
-  font-size: 24px;
-  color: #ffffff;
-}
-
-.navbar-brand {
-   font-size: 64px;
-}
-
-.navbar-inverse .navbar-nav>li>a {
-   font-family: 'Avenir Next LT Pro Regular';
-   font-size: 30px;
-   padding: 85px 50px 0px 110px;
-   color: #ffffff;
-}
-
-/* END NAVBAR */
-
-/*.thumbnail img {
-   min-height:50px;
-   height:271px;
-}*/
-
-/* End Override */
