@@ -2,3 +2,13 @@
    color: #9b9b9b;
    font-family: Lato;
 }
+
+body {
+   background: linear-gradient(#8fdfe9, #ffffff);
+   background-size: 100% 450px;
+   background-repeat: no-repeat;
+}
+
+nav {
+   font-family: Lato;
+}
