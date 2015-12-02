@@ -16,3 +16,10 @@ nav {
 .slogan {
    font-family: Poiret One;
 }
+
+@media (max-width: 40em) {
+   .logo {
+      display: block;
+      margin: auto;
+   }
+}
