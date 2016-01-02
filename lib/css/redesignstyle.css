@@ -28,3 +28,34 @@ footer {
    font-family: Lato;
    color: #3c3838;
 }
+
+/* Part of ABOUTUS */
+
+span.team_description {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+-moz-transition: opacity 500ms;
+-o-transition: opacity 500ms;
+transition: opacity 500ms;
+
+}
+
+span.team_description span {
+  display: table-cell;
+  text-align: justify;
+  vertical-align: middle;
+  /*overflow: hidden;*/
+}
+
+.team_image:hover span.team_description {
+  opacity: 1;
+}
