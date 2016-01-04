@@ -59,3 +59,23 @@ span.team_description span {
 .team_image:hover span.team_description {
   opacity: 1;
 }
+
+.team_image .description {
+   background: rgba(0,0,0,0.5);
+   color: white;
+   cursor: pointer;
+   position: absolute;
+   height: 224px;
+   top: 0px;
+   left: 0px;
+   overflow: scroll;
+   opacity: 0;
+   -webkit-transition: opacity 500ms;
+-moz-transition: opacity 500ms;
+-o-transition: opacity 500ms;
+transition: opacity 500ms;
+
+}
+.team_image:hover .description {
+   opacity: 1;
+}
