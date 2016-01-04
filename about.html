@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>VisualxMed - where visuals empower health literacy</title>
+
+   <!-- Load CSS -->
+   <link href="lib/basscss/basscss.min.css" rel="stylesheet">
+   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="lib/tachyons/css/tachyons.css"> -->
+   <link rel="stylesheet" href="lib/css/indexstyle.css">
+   <link rel="stylesheet" href="lib/css/about.css">
+   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+   <!-- Load JS -->
+   <script src="lib/jquery/jquery-2.1.4.js"></script>
+
+</head>
+
+<body>
+<header>
+   <div class="container px2 py3">
+      <div class="clearfix h2">
+         <div class="row">
+            <div class="col-12">
+               <div class="header mb2">
+                  <img class="logo lg-col-4 sm-col-6 align-middle" src="lib/images/logo.png" />
+                  <h1 class="slogan align-bottom center sm-col-6 lg-col-8 inline-block mxn1">where visuals empower health literacy</h1>
+               </div>
+            </div>
+         </div>
+
+         <div class="row">   
+            <nav class="clearfix center">
+               <a href="index.php" class="btn navbutton p0 py3 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">Home</a>
+               <a href="mission.html" class="btn navbutton p0 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">Mission</a>
+               <a href="#" class="btn navbutton p0 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">Opportunities</a>
+               <a href="contact.html" class="btn navbutton p0 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">Contact Us</a>
+            </nav>
+         </div>
+      </div>
+   </div>
+</header>
+<main>
+   <section class="container px2 py2">
+      <h3 class="mb3 regular center title">
+         ABOUT US 
+      </h3>
+      <h4 class="mb3">
+         The Executive Team
+      </h4>
+         <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mb3">
+               <img src="./about/alice.jpg" class="block" />
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 mb3">
+               <h4>
+                  ALICE SHIEH
+               </h4>
+               <h5>
+                  FOUNDER AND CEO
+               </h5>
+               <p>
+                  Alice attended the University of California, Berkeley before transferring to Duke university, where she
+                  graduated in 2015 with a Chemistry degree. A Bay Area girl through and through, she has since returned
+                  to California and is currently working as a research assistant in a cardiovascular lab at Stanford 
+                  University. She has always been interested in the intersection of education, research, and medicine and
+                  eventually would like to pursue a career in academic medicine. In her free time, she enjoys swimming, 
+                  dancing, and exploring new hiking trails.
+               </p>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mb3">
+               <img src="about/gloria.jpg" class="block" />
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 mb3">
+               <h4>
+                  GLORIA YE
+               </h4>
+               <h5>
+                  FOUNDER AND CTO
+               </h5>
+               <p>
+                  Gloria was a former West Point cadet before attending UC Berkeley where she graduated in 2013. Currently,
+                  she is working in tech in Silicon Valley. In her spare time, she enjoys hitting up beaches with her 
+                  English Golden Retriever, swimming, and discovering hidden treasures within various downtowns in the Bay
+                  Area.
+               </p>
+            </div>
+         </div>
+   </section>
+   <section class="container-fluid othermem px2 py2">
+      <h4 class="mb3">
+         Our Team
+      </h4>
+      <div id="scriptinsert" class="clearfix">
+         <div id="refinsert">
+         </div>
+      </div>
+   </section>
+</main>
+<footer>
+   <div class="container px2 py2">
+      <div class="clearfix">
+         <ul class="list-reset h3 center">
+            <li class="inline-block"><a href="index.php" class="btn">Home</a></li>
+            <li class="inline-block"><a href="about.html" class="btn">About Us</a></li>
+            <li class="inline-block"><a href="mission.html" class="btn">Mission</a></li>
+            <li class="inline-block"><a href="#" class="btn">Opportunities</a></li>
+            <li class="inline-block"><a href="contact.html" class="btn">Contact Us</a></li>
+         </ul>
+      </div>
+   </div>
+
+</footer>
+</body>
+</html>
+
+<script>
+   function TeamMember (idf, namecap, role, school) {
+      this.idf = idf;
+      this.namecap = namecap;
+      this.role = role;
+      this.school = school;
+   }
+
+   TeamMember.prototype.createDescript = function() {
+      var descrip = document.createElement("div");
+      var p1  = document.createElement("p");
+      p1.appendChild(document.createTextNode(this.namecap.toUpperCase()));
+      p1.className = "nametag";
+      var p2 = document.createElement("p");
+      p2.appendChild(document.createTextNode(this.role));
+      p2.className = "personinfo";
+      var p3 = document.createElement("p");
+      p3.appendChild(document.createTextNode(this.school));
+      p3.className = "personinfo endpersoninfo";
+      descrip.appendChild(p1);
+      descrip.appendChild(p2);
+      descrip.appendChild(p3);
+      return descrip;
+   };
+
+   var team = [new TeamMember("chelsea", "Chelsea Zhou", "Senior Creative Designer", "Duke Alum '15"), 
+               new TeamMember("ada", "Ada Zhang", "Associate Creative Designer", "Duke University '19"),
+               new TeamMember("scott", "Scott Liu", "Associate Creative Designer", "Duke University '19"), 
+               new TeamMember("jonas", "Jonas Grund", "Creative Designer", "Eidgenossische Technise Hochschule Zurich '16"),
+               new TeamMember("lekha", "Lekha Reddy", "Creative Designer", "Vanderbilt University '18"),
+               new TeamMember("sabrina", "Sabrina Wang", "Creative Designer", "John Hopkins University '18"),
+               new TeamMember("grant", "Grant Wen", "Associate Content Specialist", "Duke University '19"), 
+               new TeamMember("nina", "Nina Kaprasertkul", "Associate Content Specialist", "Duke University '19"),
+               new TeamMember("teresa", "Teresa Meng", "Associate Content Specialist", "Duke University '19"), 
+               new TeamMember("negin", "Negin Behzadian", "Content Specialist", "Stanford University '17"), 
+               new TeamMember("patrick", "Patrick Mulcahey", "Content Specialist", "Georgetown University '19"), 
+               new TeamMember("saovleak", "Saovleak Khim", "Content Specialist", "Temple University '19"), 
+               new TeamMember("alex", "Alex Gilham", "Web Developer", "San Jose State University '15"), 
+               new TeamMember("suhaas", "Suhass Yerramreddy", "Web Developer", "Vanderbilt University '19")];
+   var counter = 0;
+   var i, j, row, elm, person, cleargrid;
+   for (i = 0; i < Math.ceil(team.length / 4); i++) {
+      row = document.createElement("div");
+      row.className = "row";
+      for (j = 0; j < 4 && counter < team.length; j++, counter++) {
+         elm = document.createElement("div");
+         elm.className = "col-xs-3 col-sm-3 col-md-3 col-lg-3 mb3";
+         person = document.createElement("img");
+         person.className = "img-responsive"
+         person.setAttribute("src", "about/" + team[counter].idf + ".jpg");
+         elm.appendChild(person);
+         elm.appendChild(team[counter].createDescript());
+         row.appendChild(elm);
+      }
+      var element = document.getElementById("scriptinsert");
+      var child = document.getElementById("refinsert");
+      cleargrid = document.createElement("div");
+      cleargrid.className = "clearfix";
+      element.insertBefore(row,child);
+      element.insertBefore(cleargrid,child);
+   }
+</script>

@@ -1,0 +1,74 @@
+.navbutton {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.125rem;
+    padding: .5rem 1rem;
+    margin: 0;
+    height: auto;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+.contacttext {
+	margin-bottom: 2rem;
+	color: #9b9b9b;
+    font-family: Lato;
+    font-size: 1.75rem;
+}
+
+fieldset {
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+    font-family: sans-serif;
+}
+
+input, textarea {
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+    background-color: rgb(184,184,184);
+    color: white;
+    text-align: center;
+}
+
+label, input, button, textarea {
+	font-weight: normal;
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    font-family: Lato;
+    font-size: 1.75rem;
+    /* the following ensures they're all using the same box-model for rendering */
+    -moz-box-sizing: content-box; /* or `border-box` */
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.req {
+	font-family: Lato;
+    font-size: 1.75rem;
+    color: red;
+}

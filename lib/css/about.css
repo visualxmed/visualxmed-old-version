@@ -1,0 +1,54 @@
+.navbutton {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.125rem;
+    padding: .5rem 1rem;
+    margin: 0;
+    height: auto;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+.othermem {
+	width: 55%;
+}
+
+.nametag {
+	font-family: Lato;
+	font-size: 14pt;
+  line-height: 1.25;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.personinfo {
+  font-family: Lato;
+  font-size: 11pt;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.endpersoninfo {
+	margin-bottom: 1em;
+}
+
+#scriptinsert {
+	line-height: 1.0;
+	position: relative;
+	width: 100%;
+}

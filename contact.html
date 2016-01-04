@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>VisualxMed - where visuals empower health literacy</title>
+
+   <!-- Load CSS -->
+   <link href="lib/basscss/basscss.min.css" rel="stylesheet">
+   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="lib/tachyons/css/tachyons.css"> -->
+   <link rel="stylesheet" href="lib/css/indexstyle.css">
+   <link rel="stylesheet" href="lib/css/contact.css">
+   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+   <!-- Load JS -->
+   <script src="lib/jquery/jquery-2.1.4.js"></script>
+
+</head>
+
+<body>
+<header>
+   <div class="container px2 py3">
+      <div class="clearfix h2">
+         <div class="row">
+            <div class="col-12">
+               <div class="header mb2">
+                  <img class="logo lg-col-4 sm-col-6 align-middle" src="lib/images/logo.png" />
+                  <h1 class="slogan align-bottom center sm-col-6 lg-col-8 inline-block mxn1">where visuals empower health literacy</h1>
+               </div>
+            </div>
+         </div>
+
+         <div class="row">   
+            <nav class="clearfix center">
+               <a href="about.html" class="btn navbutton p0 py3 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">About</a>
+               <a href="mission.html" class="btn navbutton p0 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">Mission</a>
+               <a href="#" class="btn navbutton p0 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">Opportunities</a>
+               <a href="index.php" class="btn navbutton p0 mxn1 col-xs-3 col-sm-3 col-md-3 col-lg-3">Home</a>
+            </nav>
+         </div>
+      </div>
+   </div>
+</header>
+<main>
+   <section class="container px2 py2">
+      <h3 class="mb3 regular center title">
+         CONTACT US
+      </h3>
+      <p class="contacttext">
+         We'd love to hear from you! Shoot out any questions, comments, or suggestions our way. We'll do our best to respond within
+         24 hours.
+      </p>
+
+      <form action="contact-form-handler.php" name="contact_form" method="post">
+         <fieldset>
+            <label for="name"> Name* </label>
+            <input type="text" name="name" id="name" size="35" required />
+         </fieldset>
+         <fieldset>
+            <label for="email"> Email* </label>
+            <input type="email" name="email" id="email" size="50" required />
+         </fieldset>
+         <label for="msg">What would you like to say about us?*</label> <br />
+         <textarea name="msg" id="msg" rows="6" cols="90" required></textarea> <br />
+         <fieldset>
+            <label for="hear"> How did you hear about us?* </label> <br />
+            <input type="text" name="hear" id="hear" size="50" required />
+         </fieldset>
+         <p class="req"> *required </p>
+         <input type="submit" value="Send">
+         <input type="reset" value="Reset">
+      </form>
+   </section>
+</main>
+<footer>
+   <div class="container px2 py2">
+      <div class="clearfix">
+         <ul class="list-reset h3 center">
+            <li class="inline-block"><a href="index.php" class="btn">Home</a></li>
+            <li class="inline-block"><a href="about.html" class="btn">About Us</a></li>
+            <li class="inline-block"><a href="mission.html" class="btn">Mission</a></li>
+            <li class="inline-block"><a href="#" class="btn">Opportunities</a></li>
+            <li class="inline-block"><a href="contact.html" class="btn">Contact Us</a></li>
+         </ul>
+      </div>
+   </div>
+
+</footer>
+</body>
+</html>
