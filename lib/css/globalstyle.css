@@ -1,0 +1,70 @@
+.title {
+   color: #9b9b9b;
+   font-family: Lato;
+}
+
+body {
+   background: linear-gradient(#8fdfe9, #ffffff);
+   background-size: 100% 450px;
+   background-repeat: no-repeat;
+}
+
+nav {
+   font-family: Lato;
+   font-size: 17px;
+}
+
+.navbutton {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.125rem;
+    padding: .5rem 1rem;
+    margin: 0;
+    height: auto;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+.slogan {
+   font-family: Poiret One;
+}
+
+@media (max-width: 40em) {
+   .logo {
+      display: block;
+      margin: auto;
+   }
+}
+
+footer {
+   font-family: Lato;
+   color: #3c3838;
+}
+
+ img {
+   position: relative;
+   display: inline-block;
+   max-width: 100%;
+ }
+
+.regtext {
+   font-weight: normal;
+   font-size: inherit;
+   padding: 0.2em;
+   margin: 0.1em 0.2em;
+   font-family: Lato;
+   font-size: 1.75rem;
+ }
+
+ @media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
