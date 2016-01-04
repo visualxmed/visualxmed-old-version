@@ -31,12 +31,12 @@ footer {
 
 /* Part of ABOUTUS */
 
-span.team_description {
+/*span.team_description {
   background: rgba(0,0,0,0.5);
   color: white;
   cursor: pointer;
   display: table;
-  /*height: 224px;*/
+  height: 224px;
   left: 0;
   position: absolute;
   top: 0;
@@ -53,14 +53,13 @@ span.team_description span {
   display: table-cell;
   text-align: justify;
   vertical-align: middle;
-  /*overflow: hidden;*/
 }
 
 .team_image:hover span.team_description {
   opacity: 1;
-}
+}*/
 
-.team_image .description {
+.team_image .team_description {
    background: rgba(0,0,0,0.5);
    color: white;
    cursor: pointer;
@@ -76,6 +75,6 @@ span.team_description span {
 transition: opacity 500ms;
 
 }
-.team_image:hover .description {
+.team_image:hover .team_description {
    opacity: 1;
 }
