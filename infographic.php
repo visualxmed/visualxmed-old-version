@@ -10,6 +10,7 @@
    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
    <!-- <link rel="stylesheet" href="lib/tachyons/css/tachyons.css"> -->
    <link rel="stylesheet" href="lib/css/globalstyle.css">
+   <link rel="stylesheet" href="lib/css/infographic.css">
    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
    <!-- icon -->
@@ -52,7 +53,7 @@
             <nav class="clearfix center nav-hover">
                <a href="index.php" class="btn navbutton p0 py3 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2">Home</a>
                <a href="about.html" class="btn navbutton p0 py3 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2">About</a>
-               <a href="#" class="btn navbutton p0 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2 active">Mission</a>
+               <a href="mission.html" class="btn navbutton p0 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2">Mission</a>
                <a href="#" class="btn navbutton p0 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2">Opportunities</a>
                <a href="contact.html" class="btn navbutton p0 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2">Contact Us</a>
             </nav>
@@ -61,16 +62,46 @@
    </div>
 </header>
 <main>
-   <section class="container px2 py2">
-      <h3 class="mb3 regular center title">
-         Mission
-      </h3>
-      <p class="regtext">
-         Our goal is to encourage others to be proactive about their own health and well-being through visual media. We think
-         it is important for people to stay educated about advances in medicine and preventive measures, and we believe that
-         visuals such as infographics are especially effective in conveying this type of information.
-      </p>
-   </section>
+   <?php 
+
+   $dbhost = "localhost";
+   $dbname = "vmdb";
+   $dbuser = "root";
+   $dbpass = "root";
+
+   global $vmdb;
+
+   $vmdb = new mysqli();
+   $vmdb->connect($dbhost,$dbuser,$dbpass,$dbname);
+   $vmdb->set_charset("utf8");
+
+   if ($tutorial_db->connect_errno) {
+       printf("Connection failed: %sn", $tutorial_db->connect_error);
+       exit();
+   }
+
+   $search_string = preg_replace("/[^A-Za-z0-9]/", " ", $_GET['image']);
+   $dir_path = "lib/images/" . $search_string . ".jpg";
+   $search_string = $vmdb->real_escape_string($search_string);
+
+   if (strlen($search_string) >= 1 && $search_string != '') {
+       $query = 'SELECT * FROM infographics WHERE name = "' . $search_string . '" LIMIT 1';
+       $result = $vmdb->query($query);
+       /* gets the first */
+       while($results = $result->fetch_array()) {
+         $result_array[] = $results;
+      }
+      echo "<div class='infograph'>";
+      if (isset($result_array)) {
+         $infographic = $result_array[0];
+         echo  "<img src='" . $dir_path . "'/>"; 
+      }
+      else {
+         echo "<p class='regtext'> Image Not Found. Try another query. </p>";
+      }
+      echo "</div>";
+   } 
+   ?>    
 </main>
 <footer>
    <div class="container px2 py2">
@@ -78,7 +109,7 @@
          <ul class="list-reset h3 center">
             <li class="inline-block"><a href="index.php" class="btn">Home</a></li>
             <li class="inline-block"><a href="about.html" class="btn">About Us</a></li>
-            <li class="inline-block"><a href="mission.html" class="btn active">Mission</a></li>
+            <li class="inline-block"><a href="mission.html" class="btn">Mission</a></li>
             <li class="inline-block"><a href="#" class="btn">Opportunities</a></li>
             <li class="inline-block"><a href="contact.html" class="btn">Contact Us</a></li>
          </ul>

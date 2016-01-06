@@ -61,7 +61,9 @@ if (!$error) {
    <!-- <link rel="stylesheet" href="lib/tachyons/css/tachyons.css"> -->
    <link rel="stylesheet" href="lib/css/indexstyle.css">
    <link rel="stylesheet" href="lib/css/globalstyle.css">
+   <link rel="stylesheet" href="lib/css/search.css">
    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
    <!-- icon -->
@@ -84,10 +86,13 @@ if (!$error) {
    <meta name="theme-color" content="#ffffff">
    <!-- Load JS -->
    <script src="lib/jquery/jquery-2.1.4.js"></script>
+   <script src="lib/js/modernizr.custom.js"></script>
+   <script src="lib/js/search.js"></script>
 </head>
 
 <body>
 <header>
+   <button id="trigger-overlay" type="button" class="regtext search">Search</button>
    <div class="container px2 py3">
       <div class="clearfix h2">
          <div class="row">
@@ -100,7 +105,7 @@ if (!$error) {
          </div>
 
          <div class="row">   
-            <nav class="clearfix center">
+            <nav class="clearfix center nav-hover">
                <a href="#" class="btn navbutton p0 py3 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2 active">Home</a>
                <a href="about.html" class="btn navbutton p0 py3 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2">About</a>
                <a href="mission.html" class="btn navbutton p0 mxn1 col-xs-2 col-sm-2 col-md-2 col-lg-2">Mission</a>
@@ -133,11 +138,11 @@ if (!$error) {
                   <div class="thumbnaili picitem">
                      <a href="<?php echo "#image-" . $accum ?>"> 
                         <img class="img-responsive portrait" src="<?php echo ("lib/images/" . $recentinfo[$accum]->name . ".jpg"); ?>" />
-                        <span> <p> <?php echo ($recentinfo[$accum]->title); echo "<br />"; 
+                        <span> <p class="title-info"> <?php echo ($recentinfo[$accum]->title); echo "</p> <p class='date'>"; 
                                     echo (date('F-d-Y', strtotime($recentinfo[$accum]->date))); ?> </p> </span>
                      </a>
                   </div>
-                  <div class="overlay" id="<?php echo "image-" . $accum ?>">
+                  <div class="overlay-info" id="<?php echo "image-" . $accum ?>">
                      <img class="img-responsive" src="<?php echo ("lib/images/" . $recentinfo[$accum]->name . ".jpg"); ?>" />
                      <div>
                            <h3> <?php echo $recentinfo[$accum]->title ?> </h3> </span>
@@ -176,5 +181,34 @@ if (!$error) {
       </div>
    </div>
 </footer>
+    <div class="overlay overlay-contentscale hover-effect">
+      <button type="button" class="overlay-close">Close</button>
+      <div class="icon"></div>
+      <h1 class="title"> Search For Infographics </h1>
+      <input id="search" class="search-input" 
+         placeholder="Type here to search...">
+      <h4 id="results-text"> Showing results for: <b id="search-string"></b> </h4>
+      <ul id="results"> </ul>
+   </div>
+<script src="lib/js/classie.js"></script>
+<script>
+   (function() {
+   var triggerBttn = document.getElementById( 'trigger-overlay' ),
+      overlay = document.querySelector( 'div.overlay' ),
+      closeBttn = overlay.querySelector( 'button.overlay-close' );
+
+   function toggleOverlay() {
+      if( classie.has( overlay, 'open' ) ) {
+         classie.remove( overlay, 'open' );
+      }
+      else {
+         classie.add( overlay, 'open' );
+      }
+   }
+
+   triggerBttn.addEventListener( 'click', toggleOverlay );
+   closeBttn.addEventListener( 'click', toggleOverlay );
+   })();
+</script>
 </body>
 </html>

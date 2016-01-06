@@ -49,19 +49,34 @@
    width: 100%;
    height: 100%;
    text-align: center;
-   color: rgba(27,54,81,0.8);
+   color: white;
    text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
    font-size: 24px;
    opacity: 0;
-   background: radial-gradient(rgba(255,255,255,0.3), rgba(143, 233, 233, 0.9));
+   background: radial-gradient(rgba(63,99,191,0.9), rgba(143, 233, 233, 0.6));
    transition: opacity 0.3s linear;
+}
+
+.picitem > a span p.title-info{
+  position: absolute;
+  bottom: 0;
+}
+
+.picitem > a span p.title-info {
+  font-family: Oswald;
+  font-size: 20px;
+}
+
+.picitem > a span p.date {
+  font-family: Arial;
+  font-size: 12px;
 }
 
 .picitem > a:hover span {
    opacity: 1;
 }
 
-.overlay{
+.overlay-info{
    width: 0px;
    height: 0px;
    position: fixed;
@@ -74,7 +89,7 @@
    background: radial-gradient(rgba(255,255,255,0.3), rgba(143, 233, 233, 0.9));
 }
 
-.overlay > div{
+.overlay-info > div{
    position: relative;
    color: rgba(27,54,81,0.8);
    width: 950px;
@@ -85,37 +100,37 @@
    text-align: center;
 }
 
-.overlay div h3,
-.overlay div p{
+.overlay-info div h3,
+.overlay-info div p{
    padding: 0px 20px;
    width: 400px;
    height: 60px;
 }
-.overlay div h3{
+.overlay-info div h3{
    font-size: 36px;
    float: left;
    text-align: right;
    border-right: 1px solid rgba(27,54,81,0.4);
 }
-.overlay div h3 span,
-.overlay div p{
+.overlay-info div h3 span,
+.overlay-info div p{
    font-size: 16px;
    font-family: Lato, serif;
    font-style: italic;
 }
-.overlay div h3 span{
+.overlay-info div h3 span{
    display: inline-block;
    vertical-align: middle;
    line-height: normal;    
 }
-.overlay div p{
+.overlay-info div p{
    font-size: 20px;
    text-align: left;
    float: left;
    width: 460px;
 }
 
-.overlay a.close{
+.overlay-info a.close{
    background: rgba(27,54,81,0.8);
    z-index: 1001;
    color: #fff;
@@ -133,7 +148,7 @@
    box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
 }
 
-.overlay img{
+.overlay-info img{
    margin: auto;
    max-width: 800px;
    height: auto;
@@ -164,7 +179,7 @@
    background: transparent url(../glyphicons_free/glyphicons/png/glyphicons-218-circle-arrow-right.png) no-repeat top right;
 }
 
-.overlay:target {
+.overlay-info:target {
    width: 100%;
    height: auto;
    bottom: 0px;
@@ -172,12 +187,12 @@
    padding: 80px 100px 120px 100px;
 }
 
-.overlay:target img,
-.overlay:target a.close{
+.overlay-info:target img,
+.overlay-info:target a.close{
    opacity: 1;
 }
 
-.overlay:target img {
+.overlay-info:target img {
    animation: fadeInScale 1.2s ease-in-out;
 }
 @keyframes fadeInScale {
